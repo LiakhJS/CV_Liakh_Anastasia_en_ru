@@ -79,7 +79,7 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollPosition;;
 }, false);
 
-let backtotop =document.querySelector(".back-to-top")
+let backtotop = document.querySelector(".back-to-top")
 if (backtotop) {
   const toggleBacktotop = () => {
     if (window.scrollY > 100) {
@@ -92,5 +92,14 @@ if (backtotop) {
   window.addEventListener('scroll', toggleBacktotop);
 }
 
+
+// let project = document.querySelector('.project');
+// function myFunction(event) {
+//   if (event.target === project) {
+//     document.querySelector('.project-description').style.display = 'block';
+//     console.log('hey')
+//   }
+// }
+// project.addEventListener('touchend', myFunction);
 
 
