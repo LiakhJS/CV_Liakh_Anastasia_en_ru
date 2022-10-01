@@ -657,7 +657,10 @@ footer {
   .projects .project .project-description a {
     font-size:12px;}
 }
-
+@media only all and (max-width: 1080px) {
+  .projects .project .project-description a {
+    font-size:11px;}
+}
 @media only all and (max-width: 1024px) {
 
   .content {
@@ -678,8 +681,12 @@ footer {
     display: none;
   }
   .projects .project .project-description a {
-    font-size:16px;}
+    font-size:13px;}
 
+}
+@media only all and (max-width: 850px) {
+  .projects .project .project-description a {
+    font-size:11px;}
 }
 @media only all and (max-width: 768px) {
  .container{
@@ -714,6 +721,8 @@ footer {
     .projects .project {
     width:100%;
     margin-bottom: 50px;}
+    .projects .project .project-description a {
+      font-size:15px;}
 }
     
    

@@ -93,7 +93,7 @@ if (backtotop) {
 }
 
 
-// let project = document.querySelector('.project');
+let project = document.querySelector('.project');
 // function myFunction(event) {
 //   if (event.target === project) {
 //     document.querySelector('.project-description').style.display = 'block';
@@ -102,4 +102,8 @@ if (backtotop) {
 // }
 // project.addEventListener('touchend', myFunction);
 
+
+project.addEventListener('touchend', (event) => {
+alert ('hello');
+})
 
