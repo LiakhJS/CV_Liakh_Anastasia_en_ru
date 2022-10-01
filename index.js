@@ -1,9 +1,8 @@
+// печатный текст в секции #developer
 let i = 0;
-let speed = 70; /* Скорость/длительность эффекта в миллисекундах */
+let speed = 70; // Скорость/длительность эффекта в миллисекундах 
 let typingMessage = document.getElementById("typing");
-let txt = typingMessage.dataset.typedItems;
-// = 'Lorem ipsum typing effect!'; /* Текст */
-
+let txt = typingMessage.dataset.typedItems; // Текст
 function typeWriter() {
   if (i < txt.length) {
     typingMessage.innerHTML += txt.charAt(i);
@@ -11,26 +10,27 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-
 function typeWriter2() {
   setTimeout(typeWriter, 500)
 };
 typeWriter2();
+
+// навигация мобильной версии
 
 let mobileNavToogle = document.querySelector(".mobile-nav-toggle");
 
 mobileNavToogle.addEventListener("click", () => {
   let header = document.querySelector("#header");
   header.classList.toggle("--display-block");
-})
+});
+
+// плавный переход 
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
   smoothLink.addEventListener('click', function (e) {
     e.preventDefault();
     const id = smoothLink.getAttribute('href');
-
-
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -38,8 +38,7 @@ for (let smoothLink of smoothLinks) {
   });
 };
 
-
-
+// выделеение активным пункта в nav-menu при скроле страницы
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -62,22 +61,19 @@ function pageScrolling(sectionScroll) {
 };
 
 
-
-
 var lastScrollTop = 0;
-
 
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
   if (scrollPosition > lastScrollTop) {
-    pageScrolling(100);
-    // downscroll code
+    pageScrolling(100); // downscroll code
   } else {
-    pageScrolling(400);
-    // upscroll code
+    pageScrolling(400); // upscroll code
   }
   lastScrollTop = scrollPosition;;
 }, false);
+
+// кнопка возврата к началу страницы активная/неактивная
 
 let backtotop = document.querySelector(".back-to-top")
 if (backtotop) {
@@ -92,18 +88,27 @@ if (backtotop) {
   window.addEventListener('scroll', toggleBacktotop);
 }
 
+// возврат к началу страницы 
+
+backtotop.addEventListener('click', () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
+
 
 let project = document.querySelector('.project');
-// function myFunction(event) {
-//   if (event.target === project) {
-//     document.querySelector('.project-description').style.display = 'block';
-//     console.log('hey')
-//   }
-// }
-// project.addEventListener('touchend', myFunction);
+function myFunction(event) {
+  if (event.target === project && (document.querySelector('.project-description').style.display = 'flex')) {
+    document.querySelector('.project-description').style.display = 'none';
+  }
+  else
+    if (event.target === project) {
+      document.querySelector('.project-description').style.display = 'flex';
+    }
+}
+project.addEventListener('touchend', myFunction);
 
-
-project.addEventListener('touchend', (event) => {
-alert ('hello');
-})
 

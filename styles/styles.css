@@ -550,8 +550,7 @@ padding-right: 40px;}
 
 .projects .project:hover .project-description {
   background: #149ddded;
-  display: block;
-
+  /* display: block; */
   left: 0;
   right: 0;
   bottom: 0px;
