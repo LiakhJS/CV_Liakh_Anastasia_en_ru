@@ -105,6 +105,6 @@ function myFunction(event) {
     document.querySelector('.project-description').classList.toggle('adescription');
   } 
 }
-project.addEventListener('touchend', myFunction);
+project.addEventListener('touchstart', myFunction);
 
 
