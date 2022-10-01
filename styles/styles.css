@@ -560,7 +560,7 @@ padding-right: 40px;}
   display: flex;
   justify-content: space-around;
 } */
-.project-description.adescription {
+.projects .project .project-description.adescription {
   background: #149ddded;
   /* display: block; */
   left: 0;
@@ -573,7 +573,7 @@ padding-right: 40px;}
   justify-content: space-around;
 
 }
-.project-description.adescription a {
+.projects .project .project-description.adescription>a {
   opacity: 1;
 }
 
