@@ -101,14 +101,10 @@ backtotop.addEventListener('click', () => {
 
 let project = document.querySelector('.project');
 function myFunction(event) {
-  if (event.target === project && (document.querySelector('.project-description').style.display = 'flex')) {
-    document.querySelector('.project-description').style.display = 'none';
-  }
-  else
-    if (event.target === project) {
-      document.querySelector('.project-description').style.display = 'flex';
-    }
+  if (event.target === project) {
+    project.classList.toggle('adescription');
+  } 
 }
-project.addEventListener('touchend', myFunction);
+project.addEventListener('click', myFunction);
 
 
