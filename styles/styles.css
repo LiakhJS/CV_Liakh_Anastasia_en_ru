@@ -1,3 +1,4 @@
+
 *,
 ::after,
 ::before {
@@ -259,7 +260,6 @@ header .profile .social-links a:hover,
 
 
 /* li.nav-link.active span::before {
-
 content:"___";
 color:white;
 position:absolute;
@@ -536,7 +536,9 @@ padding-right: 40px;}
   opacity: 0;
 }
 
-.projects .project:hover::before {
+.projects .project.show:hover::before,
+.projects .project.show::before
+{
   top: 0;
   left: 0;
   right: 0;
@@ -550,7 +552,6 @@ padding-right: 40px;}
 
 /* .projects .project:hover .project-description {
   background: #149ddded;
-
   left: 0;
   right: 0;
   bottom: 0px;

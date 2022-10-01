@@ -103,8 +103,7 @@ let project = document.querySelector('.project');
 function myFunction(event) {
   if (event.target === project) {
     document.querySelector('.project-description').classList.toggle('adescription');
+    project.classList.toggle('show');
   } 
 }
 project.addEventListener('touchstart', myFunction);
-
-
