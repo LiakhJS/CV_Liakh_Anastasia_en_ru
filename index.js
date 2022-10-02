@@ -126,16 +126,27 @@ function myFunction2(event) {
 
 
 
-function index(event) {
+function index1(event) {
   projects.forEach((project, index) => {
     if (event.target === project) {
       indexOfProject = index;
-      projects[indexOfProject].addEventListener('touchstart', myFunction);
+
       projects[indexOfProject].addEventListener('mouseenter', myFunction1);
       projects[indexOfProject].addEventListener('mouseleave', myFunction2);
     }
   })
 }
-window.addEventListener('mouseover', index);
+function index2(event) {
+  projects.forEach((project, index) => {
+    if (event.target === project) {
+      indexOfProject = index;
+      projects[indexOfProject].addEventListener('touchstart', myFunction);
+
+    }
+  })
+}
+
+window.addEventListener('mouseover', index1);
+window.addEventListener('touchstart', index2);
 
 
