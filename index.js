@@ -107,3 +107,4 @@ function myFunction(event) {
   } 
 }
 project.addEventListener('touchstart', myFunction);
+project.addEventListener('click', myFunction);
