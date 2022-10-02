@@ -147,6 +147,6 @@ function index2(event) {
 }
 
 window.addEventListener('mouseover', index1);
-window.addEventListener('click', index2);
+document.querySelector('.projects-container').addEventListener('touchstart', index2);
 
 
