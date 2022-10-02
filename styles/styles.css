@@ -536,7 +536,7 @@ padding-right: 40px;}
   opacity: 0;
 }
 
-.projects .project:hover::before,
+.projects .project.show:hover::before,
 .projects .project.show::before
 {
   top: 0;

@@ -106,5 +106,7 @@ function myFunction(event) {
     project.classList.toggle('show');
   } 
 }
-project.addEventListener('touchstart', myFunction);
+project.addEventListener('click', myFunction);
+
+
 
