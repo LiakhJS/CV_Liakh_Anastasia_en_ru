@@ -99,25 +99,43 @@ backtotop.addEventListener('click', () => {
 })
 
 
-let project = document.querySelector('.project');
+let projects = document.querySelectorAll('.project');
+let projectDescriptions = document.querySelectorAll('.project-description');
+let indexOfProject = 0;
+
 function myFunction(event) {
-  if (event.target === project) {
-    document.querySelector('.project-description').classList.toggle('adescription');
-    project.classList.toggle('show');
+  if (event.target === projects[indexOfProject]) {
+    projectDescriptions[indexOfProject].classList.toggle('show-description');
+    projects[indexOfProject].classList.toggle('show');
   }
 }
-project.addEventListener('touchstart', myFunction);
+
 
 function myFunction1(event) {
-  if (event.target === document.querySelector('.project-description') || project) {
-    document.querySelector('.project-description').classList.add('adescription');
-    project.classList.add('show');
-  } }
-  function myFunction2(event) {
-    if (!(event.target === document.querySelector('.project-description')) || !(project)) {
-      document.querySelector('.project-description').classList.remove('adescription');
-      project.classList.remove('show');
-    } }
-project.addEventListener('mouseenter', myFunction1);
-project.addEventListener('mouseleave', myFunction2);
+  if (event.target === projectDescriptions[indexOfProject] || projects[indexOfProject]) {
+    projectDescriptions[indexOfProject].classList.add('show-description');
+    projects[indexOfProject].classList.add('show');
+  }
+}
+function myFunction2(event) {
+  if (!(event.target === projectDescriptions[indexOfProject]) || (projects[indexOfProject])) {
+    projectDescriptions[indexOfProject].classList.remove('show-description');
+    projects[indexOfProject].classList.remove('show');
+  }
+}
+
+
+
+function index(event) {
+  projects.forEach((project, index) => {
+    if (event.target === project) {
+      indexOfProject = index;
+      projects[indexOfProject].addEventListener('touchstart', myFunction);
+      projects[indexOfProject].addEventListener('mouseenter', myFunction1);
+      projects[indexOfProject].addEventListener('mouseleave', myFunction2);
+    }
+  })
+}
+window.addEventListener('mouseover', index);
+
 
