@@ -104,6 +104,20 @@ function myFunction(event) {
   if (event.target === project) {
     document.querySelector('.project-description').classList.toggle('adescription');
     project.classList.toggle('show');
-  } 
+  }
 }
 project.addEventListener('touchstart', myFunction);
+
+function myFunction1(event) {
+  if (event.target === document.querySelector('.project-description') || project) {
+    document.querySelector('.project-description').classList.add('adescription');
+    project.classList.add('show');
+  } }
+  function myFunction2(event) {
+    if (!(event.target === document.querySelector('.project-description')) || !(project)) {
+      document.querySelector('.project-description').classList.remove('adescription');
+      project.classList.remove('show');
+    } }
+project.addEventListener('mouseenter', myFunction1);
+project.addEventListener('mouseleave', myFunction2);
+

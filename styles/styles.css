@@ -561,7 +561,7 @@ padding-right: 40px;}
   display: flex;
   justify-content: space-around;
 } */
-.projects .project .project-description.adescription {
+.projects .project.show .project-description.adescription {
   background: #149ddded;
   /* display: block; */
   left: 0;
