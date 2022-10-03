@@ -1,8 +1,10 @@
-// печатный текст в секции #developer
+// typeWriterWithDelay 
+
 let i = 0;
-let speed = 70; // Скорость/длительность эффекта в миллисекундах 
-let typingMessage = document.getElementById("typing");
-let txt = typingMessage.dataset.typedItems; // Текст
+let speed = 70;
+let typingMessage = document.getElementById("typing-text");
+let txt = typingMessage.dataset.typedItems;
+
 function typeWriter() {
   if (i < txt.length) {
     typingMessage.innerHTML += txt.charAt(i);
@@ -10,39 +12,68 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-function typeWriter2() {
+
+function typeWriterWithDelay() {
   setTimeout(typeWriter, 500)
 };
-typeWriter2();
 
-// навигация мобильной версии
+typeWriterWithDelay();
+
+// mobile navigation menu become visible
 
 let mobileNavToogle = document.querySelector(".mobile-nav-toggle");
 
 mobileNavToogle.addEventListener("click", () => {
   let header = document.querySelector("#header");
-  header.classList.toggle("--display-block");
+  header.classList.toggle("display-block");
 });
 
-// плавный переход 
+// link's smooth behavior 
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
   smoothLink.addEventListener('click', function (e) {
     e.preventDefault();
-    const id = smoothLink.getAttribute('href');
-    document.querySelector(id).scrollIntoView({
+    const link = smoothLink.getAttribute('href');
+    document.querySelector(link).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
   });
 };
 
-// выделеение активным пункта в nav-menu при скроле страницы
+// back-to-top button
+
+let backtotop = document.querySelector(".back-to-top")
+backtotop.addEventListener('click', () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
+
+// back-to-top button visible/hidden
+
+
+if (backtotop) {
+  const toggleBacktotop = () => {
+    if (window.scrollY > 100) {
+      backtotop.classList.add('visible')
+    } else {
+      backtotop.classList.remove('visible')
+    }
+  }
+  window.addEventListener('load', toggleBacktotop);
+  window.addEventListener('scroll', toggleBacktotop);
+}
+
+// active nav-link while page is scrolling
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 let sectionScroll = 0;
+var lastScrollTop = 0;
 
 function pageScrolling(sectionScroll) {
   let current = "";
@@ -60,93 +91,64 @@ function pageScrolling(sectionScroll) {
   });
 };
 
-
-var lastScrollTop = 0;
-
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
   if (scrollPosition > lastScrollTop) {
-    pageScrolling(100); // downscroll code
+    pageScrolling(500); // downscroll code
   } else {
     pageScrolling(400); // upscroll code
   }
   lastScrollTop = scrollPosition;;
 }, false);
 
-// кнопка возврата к началу страницы активная/неактивная
-
-let backtotop = document.querySelector(".back-to-top")
-if (backtotop) {
-  const toggleBacktotop = () => {
-    if (window.scrollY > 100) {
-      backtotop.classList.add('visible')
-    } else {
-      backtotop.classList.remove('visible')
-    }
-  }
-  window.addEventListener('load', toggleBacktotop);
-  window.addEventListener('scroll', toggleBacktotop);
-}
-
-// возврат к началу страницы 
-
-backtotop.addEventListener('click', () => {
-
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-})
-
+// show project description 
 
 let projects = document.querySelectorAll('.project');
 let projectDescriptions = document.querySelectorAll('.project-description');
 let indexOfProject = 0;
 
-function myFunction(event) {
+function onTouchstartShowDescriptionFunction(event) {
   if (event.target === projects[indexOfProject]) {
     projectDescriptions[indexOfProject].classList.toggle('show-description');
     projects[indexOfProject].classList.toggle('show');
   }
 }
 
-
-function myFunction1(event) {
+function onMouseenterShowDescriptionFunction(event) {
   if (event.target === projectDescriptions[indexOfProject] || projects[indexOfProject]) {
     projectDescriptions[indexOfProject].classList.add('show-description');
     projects[indexOfProject].classList.add('show');
   }
 }
-function myFunction2(event) {
+
+function onMouseleaveShowDescriptionFunction(event) {
   if (!(event.target === projectDescriptions[indexOfProject]) || (projects[indexOfProject])) {
     projectDescriptions[indexOfProject].classList.remove('show-description');
     projects[indexOfProject].classList.remove('show');
   }
 }
 
-
-
-function index1(event) {
+function showDescriptionOfProjectDesctopV(event) {
   projects.forEach((project, index) => {
     if (event.target === project) {
       indexOfProject = index;
-
-      projects[indexOfProject].addEventListener('mouseenter', myFunction1);
-      projects[indexOfProject].addEventListener('mouseleave', myFunction2);
-    }
-  })
-}
-function index2(event) {
-  projects.forEach((project, index) => {
-    if (event.target === project) {
-      indexOfProject = index;
-      projects[indexOfProject].addEventListener('touchstart', myFunction);
-
+      projects[indexOfProject].addEventListener('mouseenter', onMouseenterShowDescriptionFunction);
+      projects[indexOfProject].addEventListener('mouseleave', onMouseleaveShowDescriptionFunction);
     }
   })
 }
 
-window.addEventListener('mouseover', index1);
-document.querySelector('.projects-container').addEventListener('touchstart', index2);
+function showDescriptionOfProjectDesctopM(event) {
+  projects.forEach((project, index) => {
+    if (event.target === project) {
+      indexOfProject = index;
+      projects[indexOfProject].addEventListener('touchstart', onTouchstartShowDescriptionFunction);
+
+    }
+  })
+}
+
+window.addEventListener('mouseover', showDescriptionOfProjectDesctopV);
+document.querySelector('.projects-container').addEventListener('touchstart', showDescriptionOfProjectDesctopM);
 
 
