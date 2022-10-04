@@ -96,8 +96,8 @@ change language button */
 #developer {
   width: 100%;
   height: 100vh;
-  background: url("../images/profile.jpeg") top right;
-  background-size: auto 100%;
+  background: url("../images/profile.jpg") top right;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -500,7 +500,7 @@ section {
 
 .projects .project {
   position: relative;
-  z-index: 1;
+  z-index: auto;
   width: 49%;
 }
 
@@ -702,13 +702,7 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
-  #developer {
-    width: 100%;
-    height: 100vh;
-    background: url("../images/profile.jpeg") top right;
-    background-size: auto auto;
-    background-attachment: fixed;
-  }
+
   #developer .developer-container {
     width: 100%;
     padding: 0 40px;

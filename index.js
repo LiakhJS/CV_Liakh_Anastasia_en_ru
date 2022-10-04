@@ -123,6 +123,7 @@ function pageScrolling(sectionScroll) {
     li.classList.remove("active");
     if (li.classList.contains(current)) {
       li.classList.add("active");
+      header.classList.remove("display-block");
     }
   });
 };
@@ -136,9 +137,6 @@ window.addEventListener("scroll", function () {
   }
   lastScrollTop = scrollPosition;;
 }, false);
-
-
-
 
 // show project description 
 
@@ -193,14 +191,16 @@ document.querySelector('.projects-container').addEventListener('touchstart', sho
 //scalable certificate images
 
 let certificateImages = document.querySelectorAll('.scalable-image>img');
-let certifictateImagesAnimation = document.querySelectorAll('.scalable-image');
 let resumeItemScaleBlock = document.querySelector('.resume-image-scale');
-const mediaQuery = window.matchMedia('(max-width: 640px)');
+const mediaQuery640 = window.matchMedia('(max-width: 640px)');
+const mediaQuery1550 = window.matchMedia('(min-width: 1550px)');
 
 function changeScale(event) {
-  if (mediaQuery.matches) {
+  if (mediaQuery640.matches) {
     return;
-  } else if (!mediaQuery.matches) {
+  } else if (mediaQuery1550.matches) {
+    return;
+  } else {
     if (event.target === certificateImages[0]) {
       certificateImages[0].classList.toggle('scale');
     } else if (event.target === certificateImages[1]) {
@@ -210,3 +210,4 @@ function changeScale(event) {
 }
 resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
+
