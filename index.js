@@ -1,4 +1,4 @@
-
+// animation on scroll
 
 const animItems = document.querySelectorAll('.anim-item');
 if (animItems.length > 0) {
@@ -137,6 +137,9 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollPosition;;
 }, false);
 
+
+
+
 // show project description 
 
 let projects = document.querySelectorAll('.project');
@@ -187,6 +190,23 @@ function showDescriptionOfProjectDesctopM(event) {
 window.addEventListener('mouseover', showDescriptionOfProjectDesctopV);
 document.querySelector('.projects-container').addEventListener('touchstart', showDescriptionOfProjectDesctopM);
 
+//scalable certificate images
 
+let certificateImages = document.querySelectorAll('.scalable-image>img');
+let certifictateImagesAnimation = document.querySelectorAll('.scalable-image');
+let resumeItemScaleBlock = document.querySelector('.resume-image-scale');
+const mediaQuery = window.matchMedia('(max-width: 640px)');
 
-
+function changeScale(event) {
+  if (mediaQuery.matches) {
+    return;
+  } else if (!mediaQuery.matches) {
+    if (event.target === certificateImages[0]) {
+      certificateImages[0].classList.toggle('scale');
+    } else if (event.target === certificateImages[1]) {
+      certificateImages[1].classList.toggle('scale');
+    }
+  }
+}
+resumeItemScaleBlock.addEventListener('click', changeScale);
+resumeItemScaleBlock.addEventListener('touchstart', changeScale);
