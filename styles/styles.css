@@ -707,7 +707,9 @@ footer {
     width: 100%;
     padding: 0 40px;
   }
-
+#developer {
+  background-size: 100% auto;
+}
   .about .about-img {
     display: none;
   }
