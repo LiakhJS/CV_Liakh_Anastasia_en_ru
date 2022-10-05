@@ -211,4 +211,9 @@ function changeScale(event) {
 resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+
+  if(mediaQuery640) {
+    window.addEventListener("orientationchange", ()=> {
+    document.querySelector('#developer').classList.add('change-orientation');
+  })
+}
