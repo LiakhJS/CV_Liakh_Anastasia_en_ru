@@ -97,7 +97,7 @@ change language button */
   width: 100%;
   height: 100vh;
   background: url("../images/profile.jpg") top right;
-  background-size: cover;
+  background-size: auto 100%;
   background-attachment: fixed;
 }
 
@@ -708,7 +708,11 @@ footer {
     padding: 0 40px;
   }
 #developer {
+  width: 100%;
+  height: 100vh;
+  background: url("images/profile_mobile.jpg") top right;
   background-size: 100% auto;
+  background-attachment: fixed;
 }
   .about .about-img {
     display: none;
