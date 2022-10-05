@@ -217,10 +217,10 @@ function rightOrientation() {
       document.querySelector('#developer').classList.add('display-none');
     })
   }
-  window.addEventListener("orientationchange", () => {
-    if (mediaQuery640) {
+  if (!mediaQuery640) {
+    window.addEventListener("orientationchange", () => {
       document.querySelector('#developer').classList.remove('display-none');
-    }
-  })
+    })
+  }
 }
 rightOrientation(); 
