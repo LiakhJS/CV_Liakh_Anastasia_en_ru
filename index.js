@@ -211,16 +211,9 @@ function changeScale(event) {
 resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 
-function rightOrientation() {
-  if (mediaQuery640) {
-    window.addEventListener("orientationchange", () => {
-      document.querySelector('#developer').classList.add('display-none');
-    })
-  }
-  if (!mediaQuery640) {
-    window.addEventListener("orientationchange", () => {
-      document.querySelector('#developer').classList.remove('display-none');
-    })
-  }
+
+  if(mediaQuery640) {
+    window.addEventListener("orientationchange", ()=> {
+    document.querySelector('#developer').classList.toggle('display-none');
+  })
 }
-rightOrientation(); 
