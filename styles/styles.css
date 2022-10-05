@@ -708,9 +708,6 @@ footer {
     background: url("../images/d2.jpg") top right;
     background-size: cover;
   }
-  #developer.change-orientation {
-    display:none;
-  }
 
   #developer .developer-container {
     margin: 0;
