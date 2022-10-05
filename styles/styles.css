@@ -11,7 +11,7 @@ html {
 
 html,
 body {
-  min-height: 100vh;
+  min-height: 100%;
   height: 100%;
 }
 
@@ -702,6 +702,10 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
+  #developer {
+    background: url("../images/profile_min.jpg") top right ;
+    background-size: cover;
+  }
 
   #developer .developer-container {
     width: 100%;
