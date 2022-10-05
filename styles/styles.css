@@ -11,7 +11,7 @@ html {
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
   height: 100%;
 }
 
@@ -702,10 +702,6 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
-  #developer {
-    background: url("../images/profile_mobile.jpg") top right ;
-    background-size: auto 100vh;
-  }
 
   #developer .developer-container {
     width: 100%;
