@@ -704,16 +704,16 @@ footer {
 @media only all and (max-width: 640px) {
   #developer {
     width: 100%;
-    min-height: 100vh;
-    background: url("../images/profile_min.jpg") top right ;
+    height: 100vh;
+    background: url("../images/profile_min.jpg") top right;
     background-size: cover;
   }
 
   #developer .developer-container {
-  margin:0;
+    margin: 0;
     width: 100%;
     padding: 0 40px;
-    height: 100vh;
+    height: 100%;
   }
 
   .about .about-img {
