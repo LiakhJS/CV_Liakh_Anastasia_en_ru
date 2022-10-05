@@ -223,4 +223,4 @@ function rightOrientation() {
     }
   })
 }
-rightOrientation();
+rightOrientation(); 
