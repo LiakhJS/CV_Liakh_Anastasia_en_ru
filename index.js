@@ -214,6 +214,6 @@ resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 
   if(mediaQuery640) {
     window.addEventListener("orientationchange", ()=> {
-    document.querySelector('#developer').style.display = 'none';
+    document.querySelector('#developer').classList.toggle('display-none');
   })
 }
