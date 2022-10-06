@@ -124,21 +124,6 @@ change language button */
   z-index: 1;
 }
 
-header.landscape,
-.mobile-nav-toggle.landscape,
-#about.landscape,
-#skills.landscape,
-#resume.landscape,
-#projects.landscape,
-footer.landscape {
-  display: none;
-}
-
-#developer .developer-container.landscape {
-  margin: 0;
-}
-
-
 #developer .developer-container h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
@@ -825,4 +810,17 @@ footer {
 
     z-index: 5;
   }
+}
+header.landscape,
+.mobile-nav-toggle.landscape,
+#about.landscape,
+#skills.landscape,
+#resume.landscape,
+#projects.landscape,
+footer.landscape {
+  display: none;
+}
+
+#developer .developer-container.landscape {
+  margin: 0;
 }
