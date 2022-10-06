@@ -100,18 +100,7 @@ change language button */
   background-size: cover;
   background-attachment: fixed;
 }
-#developer .display-landscape::before {
-  content: "Переверните экран";
-  background:white;
-  color:black;
-  position: absolute;
-  bottom: 0;
-  font-size: xx-large;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
+
 #developer:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
@@ -147,20 +136,6 @@ change language button */
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
-}
-header .landscape,
-.mobile-nav-toggle .landscape,
-#about .landscape,
-#skills .landscape,
-#resume .landscape,
-#projects .landscape,
-footer .landscape,
-#developer .developer-container.landscape{
-  display: none;
-}
-
-#developer .display-landscape {
-background:none;
 }
 
 #developer .developer-container {
@@ -646,7 +621,9 @@ footer {
   opacity: 1;
 }
 
-
+#developer.display-none {
+  display: none;
+}
 
 @media only all and (max-width: 1280px) {
   .about-list {
