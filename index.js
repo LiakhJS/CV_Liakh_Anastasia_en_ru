@@ -215,6 +215,7 @@ resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 if (mediaQuery640) {
   window.addEventListener("orientationchange", () => {
     document.querySelector('#developer').classList.add('display-landscape');
+
     document.querySelector('header').classList.add('landscape');
     document.querySelector('.developer-container').classList.add('landscape');
     document.querySelector('.mobile-nav-toggle').classList.add('landscape');
@@ -223,9 +224,11 @@ if (mediaQuery640) {
     document.querySelector('#resume').classList.add('landscape');
     document.querySelector('#projects').classList.add('landscape');
     document.querySelector('footer').classList.add('landscape');
-  })
-} else if (!mediaQuery640) {
-  window.addEventListener("orientationchange", () => {
-    document.querySelector('#developer').classList.remove('display-landscape');
+    if (!mediaQuery640) {
+      window.addEventListener("orientationchange", () => {
+        document.querySelector('#developer').classList.remove('display-landscape');
+      })
+    }
   })
 }
+
