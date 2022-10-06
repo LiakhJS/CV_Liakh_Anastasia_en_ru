@@ -114,10 +114,9 @@ change language button */
 
 #developer .developer-container.landscape {
   margin: 0;
-  display: none;
 }
 #developer.landscape {
-background: url(../images/green.jpeg);
+background: url('../images/green.jpeg');
 }
 
 #developer .developer-container h1 {
