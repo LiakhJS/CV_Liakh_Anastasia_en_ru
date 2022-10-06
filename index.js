@@ -210,16 +210,3 @@ function changeScale(event) {
 }
 resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
-
-
-
-  window.addEventListener("orientationchange", () => {
-    if (mediaQuery640) {
-    document.body.style.display = 'block';}
-    else {
-    
-    document.body.style.display = 'none';
-    }
-})
-
-
