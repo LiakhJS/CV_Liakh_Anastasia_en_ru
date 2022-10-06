@@ -225,4 +225,8 @@ if (mediaQuery640) {
     document.querySelector('footer').classList.add('landscape');
   })
 
+} else if (!mediaQuery640) {
+  window.addEventListener("orientationchange", () => {
+    document.querySelector('#developer').classList.remove('display-landscape');
+  })
 }
