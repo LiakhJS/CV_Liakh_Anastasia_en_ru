@@ -99,6 +99,7 @@ change language button */
   background: url("../images/profile.jpg") top right;
   background-size: cover;
   background-attachment: initial;
+  padding: 0px;
 }
 
 #developer:before {
