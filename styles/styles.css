@@ -112,11 +112,33 @@ change language button */
   z-index: 1;
 }
 
-#developer .developer-container.landscape {
+/* #developer .developer-container.landscape {
   margin: 0;
 }
 #developer.landscape {
 background: url('../images/green.jpeg');
+} */
+header.landscape,
+.mobile-nav-toggle.landscape,
+#about.landscape,
+#skills.landscape,
+#resume.landscape,
+#projects.landscape,
+footer.landscape,
+#developer .developer-container.landscape{
+  display: none;
+}
+
+#developer.display-landscape::before {
+  content: "Переверните экран";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  font-size: xx-large;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 #developer .developer-container h1 {
