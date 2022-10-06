@@ -139,11 +139,12 @@ change language button */
 }
 
 #developer .developer-container {
-  margin: 300px auto;
+  margin: 0 auto;
   width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height:100%;
 }
 
 /* header: .profile with social links, 
@@ -702,12 +703,12 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
-  #developer .developer-container {
+  /* #developer .developer-container {
     margin: 0;
     width: 100%;
     padding: 0 40px;
     height: 100%;
-  }
+  } */
 
   .about .about-img {
     display: none;
