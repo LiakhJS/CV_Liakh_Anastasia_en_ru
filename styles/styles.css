@@ -712,12 +712,7 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
-  #developer {
-    width: 100%;
-    height: 100vh;
-    background: url("../images/d2.jpg") top right;
-    background-size: cover;
-  }
+ 
 
   #developer .developer-container {
     margin: 0;
@@ -783,6 +778,12 @@ footer {
   .projects .project .project-description a {
     font-size: 12px;
   }
+  #developer {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/d2.jpg") top right;
+    background-size: cover;
+  }
 }
 
 @media only all and (max-width: 425px) {
@@ -819,19 +820,6 @@ footer.landscape,
   display: none;
 }
 
-#developer .display-landscape::before {
-  content: "переверните";
-  position: absolute;
-  color:black;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  height:100vh;
-}
 #developer .developer-container.landscape{
   display: none;
   }
-  #developer .display-landscape {
- height:100vh;}
