@@ -112,9 +112,12 @@ change language button */
   z-index: 1;
 }
 
-#developer .developer-container .landscape {
+#developer .developer-container.landscape {
   margin: 0;
   display: none;
+}
+#developer.landscape {
+background: none;
 }
 
 #developer .developer-container h1 {
