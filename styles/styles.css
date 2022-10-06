@@ -137,6 +137,32 @@ change language button */
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
 }
+header.landscape,
+.mobile-nav-toggle.landscape,
+#about.landscape,
+#skills.landscape,
+#resume.landscape,
+#projects.landscape,
+footer.landscape,
+#developer .developer-container.landscape{
+  display: none;
+}
+
+#developer.display-landscape::before {
+  content: "Переверните экран";
+  background:white;
+  color:black;
+  position: absolute;
+  bottom: 0;
+  font-size: xx-large;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#developer.display-landscape {
+background:none;
+}
 
 #developer .developer-container {
   margin: 300px auto;
@@ -621,32 +647,7 @@ footer {
   opacity: 1;
 }
 
-header.landscape,
-.mobile-nav-toggle.landscape,
-#about.landscape,
-#skills.landscape,
-#resume.landscape,
-#projects.landscape,
-footer.landscape,
-#developer .developer-container.landscape{
-  display: none;
-}
 
-#developer.display-landscape::before {
-  content: "Переверните экран";
-  background:white;
-  color:black;
-  position: absolute;
-  bottom: 0;
-  font-size: xx-large;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-#developer.display-landscape {
-background:none;
-}
 
 @media only all and (max-width: 1280px) {
   .about-list {
