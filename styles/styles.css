@@ -827,3 +827,6 @@ footer.landscape,
   right: 0;
   z-index: 1;
 }
+#developer.display-landscape {
+background: none;
+}
