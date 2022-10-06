@@ -814,12 +814,12 @@ header.landscape,
 #resume.landscape,
 #projects.landscape,
 footer.landscape,
-#developer.developer-container.landscape{
+#developer .developer-container.landscape{
   display: none;
 }
 
 #developer.display-landscape::before {
-  content: "";
+  content: "переверните";
   position: absolute;
   bottom: 0;
   top: 0;
