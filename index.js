@@ -212,16 +212,10 @@ resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 
 
-//   if(mediaQuery640) {
-//     window.addEventListener("orientationchange", ()=> {
-//     document.querySelector('#developer').classList.toggle('display-none');
-//   })
-// }
+  if(mediaQuery640) {
+    window.addEventListener("orientationchange", ()=> {
+    document.body.style.display = 'none';
+  })
+} 
 
-if(mediaQuery640) {
-  window.addEventListener("orientationchange", ()=> {
-  document.body.style.display = 'none';
-  document.documentElement.classList.add('orientation-landscape');
-})
-}
 
