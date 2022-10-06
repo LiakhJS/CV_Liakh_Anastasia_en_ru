@@ -216,11 +216,13 @@ if (mediaQuery640) {
   window.addEventListener("orientationchange", () => {
     document.querySelector('#developer').classList.add('display-landscape');
     document.querySelector('header').classList.add('landscape');
-    document.querySelector('.back-to-top').classList.add('landscape');
+    document.querySelector('.developer-container').classList.add('landscape');
+    document.querySelector('.mobile-nav-toggle').classList.add('landscape');
     document.querySelector('#about').classList.add('landscape');
     document.querySelector('#skills').classList.add('landscape');
     document.querySelector('#resume').classList.add('landscape');
     document.querySelector('#projects').classList.add('landscape');
     document.querySelector('footer').classList.add('landscape');
   })
+  
 }

@@ -124,7 +124,8 @@ change language button */
 }
 
 header.landscape,
-.back-to-top.landscape,
+.mobile-nav-toggle.landscape,
+.developer-container.landscape,
 #about.landscape,
 #skills.landscape,
 #resume.landscape,
