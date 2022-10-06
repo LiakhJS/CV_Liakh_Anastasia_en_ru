@@ -813,12 +813,13 @@ header.landscape,
 #skills.landscape,
 #resume.landscape,
 #projects.landscape,
-footer.landscape
+footer.landscape,
+.back-to-top.landscape
 {
   display: none;
 }
 
-#developer.display-landscape::before {
+#developer .display-landscape::before {
   content: "переверните";
   position: absolute;
   color:black;
