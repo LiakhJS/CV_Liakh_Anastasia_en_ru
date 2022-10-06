@@ -210,3 +210,11 @@ function changeScale(event) {
 }
 resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
+
+
+  if(mediaQuery640) {
+    window.addEventListener("orientationchange", ()=> {
+    document.querySelector('#developer').style.background = "url('../images/profile.jpg') no-repeat top right";
+    document.querySelector('#developer').style.backgroundSize = "auto 100vh";
+  }) 
+}
