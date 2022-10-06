@@ -125,7 +125,7 @@ header.landscape,
 #resume.landscape,
 #projects.landscape,
 footer.landscape,
-#developer .developer-container.landscape{
+#developer.developer-container.landscape{
   display: none;
 }
 
