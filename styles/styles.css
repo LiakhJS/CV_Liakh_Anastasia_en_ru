@@ -813,17 +813,20 @@ header.landscape,
 #skills.landscape,
 #resume.landscape,
 #projects.landscape,
-footer.landscape,
-#developer .developer-container.landscape{
+footer.landscape
+{
   display: none;
 }
 
 #developer.display-landscape::before {
   content: "переверните";
   position: absolute;
+  color:black;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
 }
+#developer .developer-container.landscape{
+  display: none;}
