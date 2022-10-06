@@ -212,3 +212,9 @@ resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 
 
+if (mediaQuery640) {
+  window.addEventListener("orientationchange", () => {
+    document.querySelector('#developer').classList.add('display-landscape');
+  })
+
+}
