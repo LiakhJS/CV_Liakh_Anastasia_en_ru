@@ -765,7 +765,7 @@ footer {
 
 @media only all and (max-width: 640px) and (orientation: landscape) {
 #developer {
-background: url('../images/green.jpeg');}
+background-color: #040b14;
 }
 
 @media only all and (max-width: 550px) {
