@@ -216,7 +216,7 @@ if (mediaQuery640) {
   window.addEventListener("orientationchange", () => {
     document.body.style.display = 'none';
   });
-} else {
+} else if (!mediaQuery640){
   window.addEventListener("orientationchange", () => {
     document.body.style.display = 'block';
   });
