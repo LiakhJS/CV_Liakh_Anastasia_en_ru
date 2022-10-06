@@ -101,7 +101,7 @@ change language button */
   background-attachment: initial;
 }
 
-#developer:before {
+/* #developer:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
   position: absolute;
@@ -110,7 +110,7 @@ change language button */
   left: 0;
   right: 0;
   z-index: 1;
-}
+} */
 
 #developer .developer-container h1 {
   margin: 0 0 10px 0;
