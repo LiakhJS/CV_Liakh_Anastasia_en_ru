@@ -634,7 +634,8 @@ footer.landscape,
 
 #developer.display-landscape::before {
   content: "Переверните экран";
-  background: rgba(5, 13, 24, 0.3);
+  background:white;
+  color:black;
   position: absolute;
   bottom: 0;
   font-size: xx-large;
@@ -644,8 +645,7 @@ footer.landscape,
   z-index: 1;
 }
 #developer.display-landscape {
-height:100vh;
-background-size: cover;
+background:none;
 }
 
 @media only all and (max-width: 1280px) {
