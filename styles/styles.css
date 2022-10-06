@@ -117,6 +117,7 @@ change language button */
   background: rgba(5, 13, 24, 0.3);
   position: absolute;
   bottom: 0;
+  font-size: xx-large;
   top: 0;
   left: 0;
   right: 0;
@@ -133,7 +134,7 @@ footer.landscape {
   display: none;
 }
 
-.developer-container.landscape {
+#developer .developer-container.landscape {
   margin: 0;
 }
 
