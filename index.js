@@ -214,7 +214,7 @@ resumeItemScaleBlock.addEventListener('touchstart', changeScale);
 
   if(mediaQuery640) {
     window.addEventListener("orientationchange", ()=> {
-    document.querySelector('#developer').style.background = "url('../images/green.jpeg') no-repeat top right";
+    document.querySelector('#developer').style.backgroundImage = "url('../images/green.jpeg')";
     document.querySelector('#developer').style.backgroundSize = "auto 100vh";
   }) 
 }
