@@ -99,7 +99,6 @@ change language button */
   background: url("../images/profile.jpg") top right;
   background-size: cover;
   background-attachment: initial;
-  padding: 0px;
 }
 
 #developer:before {
@@ -145,7 +144,7 @@ change language button */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height:100%;
+  height: 100%;
 }
 
 /* header: .profile with social links, 
@@ -266,6 +265,10 @@ li.nav-link.active:focus i,
 /* section's general styles */
 section {
   padding: 40px 0 0 0;
+}
+
+#developer {
+  padding: 0;
 }
 
 .section-title h2 {
