@@ -621,7 +621,32 @@ footer {
   opacity: 1;
 }
 
+header.landscape,
+.mobile-nav-toggle.landscape,
+#about.landscape,
+#skills.landscape,
+#resume.landscape,
+#projects.landscape,
+footer.landscape,
+#developer .developer-container.landscape{
+  display: none;
+}
 
+#developer.display-landscape::before {
+  content: "Переверните экран";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  font-size: xx-large;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#developer.display-landscape {
+height:100vh;
+background-size: cover;
+}
 
 @media only all and (max-width: 1280px) {
   .about-list {
@@ -798,29 +823,4 @@ footer {
 
     z-index: 5;
   }
-}
-header.landscape,
-.mobile-nav-toggle.landscape,
-#about.landscape,
-#skills.landscape,
-#resume.landscape,
-#projects.landscape,
-footer.landscape,
-#developer .developer-container.landscape{
-  display: none;
-}
-
-#developer.display-landscape::before {
-  content: "Переверните экран";
-  background: rgba(5, 13, 24, 0.3);
-  position: absolute;
-  bottom: 0;
-  font-size: xx-large;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-#developer.display-landscape {
-background-size: 100% auto;
 }
