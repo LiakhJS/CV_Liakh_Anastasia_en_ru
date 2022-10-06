@@ -215,6 +215,6 @@ resumeItemScaleBlock.addEventListener('touchstart', changeScale);
   if(mediaQuery640) {
     window.addEventListener("orientationchange", ()=> {
     document.querySelector('#developer .developer-container').classList.toggle('landscape');
-    
+    document.querySelector('#developer').classList.toggle('landscape');
   })
-}
+} 
