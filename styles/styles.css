@@ -96,7 +96,7 @@ change language button */
 #developer {
   width: 100%;
   height: 100vh;
-  background: url("../images/profile.jpg") top right;
+  background: url("../images/profile.jpg") top right no-repeat;
   background-size: auto 100%;
   background-attachment: fixed;
 }
@@ -705,7 +705,7 @@ footer {
   }
 }
 
-@media only all and (max-width: 640px) {
+@media only all and (max-width: 640px) and (orientation: portrait)  {
   #developer {
     width: 100%;
     height: 100vh;
@@ -761,6 +761,11 @@ footer {
   .projects .project .project-description a {
     font-size: 15px;
   }
+}
+
+@media only all and (max-width: 640px) and (orientation: landscape) {
+#developer {
+background: url('../images/green.jpeg');}
 }
 
 @media only all and (max-width: 550px) {
