@@ -96,7 +96,7 @@ change language button */
 #developer {
   width: 100%;
   height: 100vh;
-  background: url("../images/profile2.jpg") top right;
+  background: url("../images/profile.jpg") top right;
   background-size: cover;
   background-attachment: initial;
 }
@@ -621,8 +621,6 @@ footer {
   opacity: 1;
 }
 
-
-
 @media only all and (max-width: 1280px) {
   .about-list {
     flex-direction: column;
@@ -704,8 +702,6 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
- 
-
   #developer .developer-container {
     margin: 0;
     width: 100%;
@@ -794,18 +790,3 @@ footer {
     z-index: 5;
   }
 }
-header.landscape,
-.mobile-nav-toggle.landscape,
-#about.landscape,
-#skills.landscape,
-#resume.landscape,
-#projects.landscape,
-footer.landscape,
-.back-to-top.landscape
-{
-  display: none;
-}
-
-#developer .developer-container.landscape{
-  display: none;
-  }

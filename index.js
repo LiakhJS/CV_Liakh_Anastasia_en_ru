@@ -210,19 +210,3 @@ function changeScale(event) {
 }
 resumeItemScaleBlock.addEventListener('click', changeScale);
 resumeItemScaleBlock.addEventListener('touchstart', changeScale);
-
-
-// if (mediaQuery640) {
-//   window.addEventListener("orientationchange", () => {
-//     document.querySelector('#developer').classList.toggle('display-landscape');
-//     document.querySelector('header').classList.toggle('landscape');
-//     document.querySelector('#about').classList.toggle('landscape');
-//     document.querySelector('#skills').classList.toggle('landscape');
-//     document.querySelector('#developer .developer-container').classList.toggle('landscape');
-//     document.querySelector('.mobile-nav-toggle').classList.toggle('landscape');
-//     document.querySelector('#resume').classList.toggle('landscape');
-//     document.querySelector('#projects').classList.toggle('landscape');
-//     document.querySelector('footer').classList.toggle('landscape');
-//     document.querySelector('.back-to-top').classList.toggle('landscape');
-//   })
-// }
