@@ -828,6 +828,10 @@ footer.landscape,
   left: 0;
   right: 0;
   z-index: 1;
+  height:100vh;
 }
 #developer .developer-container.landscape{
-  display: none;}
+  display: none;
+  }
+  #developer .display-landscape {
+ height:100vh;}
