@@ -117,7 +117,7 @@ change language button */
   display: none;
 }
 #developer.landscape {
-background: none;
+background: url(../images/green.jpeg);
 }
 
 #developer .developer-container h1 {
