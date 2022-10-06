@@ -125,13 +125,16 @@ change language button */
 
 header.landscape,
 .mobile-nav-toggle.landscape,
-.developer-container.landscape,
 #about.landscape,
 #skills.landscape,
 #resume.landscape,
 #projects.landscape,
 footer.landscape {
   display: none;
+}
+
+.developer-container.landscape {
+  margin: 0;
 }
 
 
