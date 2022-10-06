@@ -807,18 +807,18 @@ footer {
     z-index: 5;
   }
 }
-header .landscape,
-.mobile-nav-toggle .landscape,
-#about .landscape,
-#skills .landscape,
-#resume .landscape,
-#projects .landscape,
-footer .landscape,
-#developer .developer-container.landscape{
+header.landscape,
+.mobile-nav-toggle.landscape,
+#about.landscape,
+#skills.landscape,
+#resume.landscape,
+#projects.landscape,
+footer.landscape,
+#developer.developer-container.landscape{
   display: none;
 }
 
-#developer .display-landscape::before {
+#developer.display-landscape::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -826,7 +826,4 @@ footer .landscape,
   left: 0;
   right: 0;
   z-index: 1;
-}
-#developer .display-landscape {
-background: none;
 }
