@@ -96,7 +96,7 @@ change language button */
 #developer {
   width: 100%;
   height: 100vh;
-  background: url("../images/profile.jpg") top right;
+  background: url("../images/profile1.jpg") top right;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -777,12 +777,6 @@ footer {
 
   .projects .project .project-description a {
     font-size: 12px;
-  }
-  #developer {
-    width: 100%;
-    height: 100vh;
-    background: url("../images/green.jpg") top right;
-    background-size: cover;
   }
 }
 
