@@ -224,6 +224,5 @@ if (mediaQuery640) {
     document.querySelector('#projects').classList.toggle('landscape');
     document.querySelector('footer').classList.toggle('landscape');
     document.querySelector('.back-to-top').classList.toggle('landscape');
-    alert('Переверните ваше устройство')
   })
 }
