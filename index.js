@@ -63,6 +63,8 @@ function typeWriterWithDelay() {
   setTimeout(typeWriter, 500)
 };
 
+typeWriterWithDelay();
+
 // mobile navigation menu become visible
 
 let mobileNavToogle = document.querySelector(".mobile-nav-toggle");
