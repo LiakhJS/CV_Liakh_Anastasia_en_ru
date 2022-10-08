@@ -101,17 +101,6 @@ change language button */
   background-attachment: initial;
 }
 
-/* #developer:before {
-  content: "";
-  background: rgba(5, 13, 24, 0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-} */
-
 #developer .developer-container h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
@@ -129,6 +118,7 @@ change language button */
   font-family: "Poppins", sans-serif;
   color: white;
   z-index: 2;
+  font-weight: bold;
 }
 
 #developer p span {
@@ -626,6 +616,76 @@ footer {
   opacity: 1;
 }
 
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #ffffff;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 @media only all and (max-width: 1280px) {
   .about-list {
     flex-direction: column;
@@ -707,13 +767,6 @@ footer {
 }
 
 @media only all and (max-width: 640px) {
-  /* #developer .developer-container {
-    margin: 0;
-    width: 100%;
-    padding: 0 40px;
-    height: 100%;
-  } */
-
   .about .about-img {
     display: none;
   }

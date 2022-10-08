@@ -1,3 +1,13 @@
+//preloader
+
+window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
+}
+
 // animation on scroll
 
 const animItems = document.querySelectorAll('.anim-item');
@@ -52,8 +62,6 @@ function typeWriter() {
 function typeWriterWithDelay() {
   setTimeout(typeWriter, 500)
 };
-
-typeWriterWithDelay();
 
 // mobile navigation menu become visible
 
